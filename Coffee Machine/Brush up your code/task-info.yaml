@@ -271,6 +271,15 @@ files:
         }
     }
   learner_created: false
+- name: src/machine/Application.java
+  visible: true
+  learner_created: true
+- name: src/machine/CoffeeDrinks.java
+  visible: true
+  learner_created: true
+- name: src/machine/MachineState.java
+  visible: true
+  learner_created: true
 - name: src/machine/CoffeeMachine.java
   visible: true
   text: |
@@ -416,5 +425,5 @@ files:
     }
   learner_created: true
 feedback_link: https://hyperskill.org/projects/33/stages/180/implement
-status: Solved
+status: Failed
 record: -1

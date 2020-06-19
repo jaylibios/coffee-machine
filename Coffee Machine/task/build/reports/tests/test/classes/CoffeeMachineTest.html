@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.123s</div>
+<div class="counter">0.039s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,91 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="start"></a>
+<h3 class="failures">start</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Fatal error in test #1, please send the report to support@hyperskill.org
+
+OS Windows 10
+Java 11.0.7
+Vendor JetBrains s.r.o.
+Testing library version 7
+
+org.hyperskill.hstest.exception.outcomes.FatalError: No main method found
+	at org.hyperskill.hstest.common.ReflectionUtils.getMainMethod(ReflectionUtils.java:18)
+	at org.hyperskill.hstest.testing.TestedProgram.&lt;init&gt;(TestedProgram.java:51)
+	at org.hyperskill.hstest.dynamic.input.DynamicTesting.lambda$toDynamicTesting$0(DynamicTesting.java:118)
+	at org.hyperskill.hstest.testing.runner.AsyncMainMethodRunner.lambda$runMain$0(AsyncMainMethodRunner.java:30)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,238 +156,17 @@
 </tr>
 </thead>
 <tr>
-<td class="success">start</td>
-<td class="success">0.123s</td>
-<td class="success">passed</td>
+<td class="failures">start</td>
+<td class="failures">0.039s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; 2
-I have enough resources, making you a coffee!
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; 2
-Sorry, not enough!
-
-Write action (buy, fill, take, remaining, exit):
-&gt; fill
-How many ml of water do you want to add?
-&gt; 1000
-How many ml of milk do you want to add?
-&gt; 0
-How many grams of coffee beans do you want to add?
-&gt; 0
-How many disposable cups do you want to add?
-&gt; 0
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; 2
-I have enough resources, making you a coffee!
-
-Write action (buy, fill, take, remaining, exit):
-&gt; take
-I give you $564
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-700 of water
-390 of milk
-80 of coffee beans
-7 of disposable cups
-$0 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
-?[1;31m
-Start test 2?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; fill
-How many ml of water do you want to add?
-&gt; 3000
-How many ml of milk do you want to add?
-&gt; 3000
-How many grams of coffee beans do you want to add?
-&gt; 3000
-How many disposable cups do you want to add?
-&gt; 3000
-
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-3400 of water
-3540 of milk
-3120 of coffee beans
-3009 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
-?[1;31m
-Start test 3?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; 1
-I have enough resources, making you a coffee!
-
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-150 of water
-540 of milk
-104 of coffee beans
-8 of disposable cups
-$554 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
-?[1;31m
-Start test 4?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; 2
-I have enough resources, making you a coffee!
-
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-50 of water
-465 of milk
-100 of coffee beans
-8 of disposable cups
-$557 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
-?[1;31m
-Start test 5?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; 3
-I have enough resources, making you a coffee!
-
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-200 of water
-440 of milk
-108 of coffee beans
-8 of disposable cups
-$556 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
-?[1;31m
-Start test 6?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; take
-I give you $550
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$0 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
-?[1;31m
-Start test 7?[0m
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; buy
-What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-&gt; back
-
-Write action (buy, fill, take, remaining, exit):
-&gt; remaining
-The coffee machine has:
-400 of water
-540 of milk
-120 of coffee beans
-9 of disposable cups
-$550 of money
-
-Write action (buy, fill, take, remaining, exit):
-&gt; exit
 </pre>
 </span>
 </div>
@@ -321,7 +178,7 @@ Write action (buy, fill, take, remaining, exit):
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.3.1</a> at Jun 18, 2020, 7:54:18 PM</p>
+<a href="http://www.gradle.org">Gradle 5.3.1</a> at Jun 19, 2020, 6:43:54 PM</p>
 </div>
 </div>
 </body>
